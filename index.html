@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast - Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>☀️ SkyCast</h1>
+        <p>Your daily weather companion</p>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <h2>Check the Weather</h2>
+            <p>Enter a city to discover its weather conditions.</p>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter a city, e.g. Colombo"
+                    aria-label="City name"
+                >
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <p id="status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="weather-card">
+            <h2>Current Weather</h2>
+            <h3 id="cityName">City Name</h3>
+            <p id="condition">Weather condition will appear here</p>
+
+            <div class="weather-details">
+                <div>
+                    <span class="label">Temperature</span>
+                    <p id="temperature">-- °C</p>
+                </div>
+
+                <div>
+                    <span class="label">Wind Speed</span>
+                    <p id="windSpeed">-- km/h</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast-section">
+            <h2>5-Day Forecast</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Condition</th>
+                            <th>Max °C</th>
+                            <th>Min °C</th>
+                            <th>Precipitation (mm)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="forecastBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>SkyCast | Weather information powered by Open-Meteo</p>
+    </footer>
+
+</body>
+</html>
